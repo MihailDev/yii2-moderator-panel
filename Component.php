@@ -24,7 +24,7 @@ class Component extends \yii\base\Component{
 	public $enabled = true;
 	public $access;
 	public $frameLayout = '@mihaildev/moderator/panel/frameLayout';
-	protected $_widgets;
+	protected $_widgets = [];
 	public function init(){
 		Yii::$app->getView()->on(View::EVENT_END_BODY, [$this, 'renderPanel']);
 	}
